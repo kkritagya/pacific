@@ -1,0 +1,20 @@
+[33mdc45530[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m feat: create User model with authentication fields
+[33meb0a6e1[m feat: configure Sequelize database connection
+[33m28e4a03[m feat: initialize Node.js backend with Express and dependencies
+[33mfbe6f78[m feat: create user profile page with order history
+[33m1cd579d[m feat: implement shopping cart page with checkout functionality
+[33m1d15ccf[m feat: add merchandise store page with artist-branded items
+[33m7515895[m feat: implement vinyl store page with product catalog
+[33m881da47[m feat: create detailed artist profile page with discography
+[33m01c5a19[m feat: implement artists listing page with search and filtering
+[33m8f7c5d4[m feat: create user registration page with validation
+[33mc7448df[m feat: implement user login page with form validation
+[33m50208dd[m feat: create homepage with hero section and featured artists
+[33meb1be3e[m feat: implement protected route component for authentication
+[33mf0f6e1f[m feat: add shopping cart context for e-commerce functionality
+[33m9b1a598[m feat: implement authentication context for user management
+[33mdd03fda[m feat: implement navigation component with responsive design
+[33m753fc02[m feat: create main App component with routing structure
+[33m1bbdb40[m feat: setup React entry point and global styles
+[33m563cb71[m feat: initialize React frontend with Vite and ESLint configuration
+[33m909123d[m docs: initial project documentation and README setup

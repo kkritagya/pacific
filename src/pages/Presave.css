@@ -1,0 +1,399 @@
+.presave-page {
+  padding: 40px 0 80px;
+  min-height: 100vh;
+  width: 100% !important;
+  max-width: none !important;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%);
+}
+
+.presave-page .container {
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 0 32px !important;
+  width: 100% !important;
+}
+
+@media (min-width: 1600px) {
+  .presave-page .container {
+    padding: 0 48px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .presave-page .container {
+    padding: 0 64px;
+  }
+}
+
+.presave-header {
+  text-align: center;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0;
+  background: linear-gradient(135deg, var(--success), var(--primary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-icon {
+  color: var(--success);
+  animation: ring 2s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0%, 100% { transform: rotate(-15deg); }
+  50% { transform: rotate(15deg); }
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: var(--neutral-400);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.presave-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .presave-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .presave-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+  }
+}
+
+@media (min-width: 2400px) {
+  .presave-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 56px;
+  }
+}
+
+.presave-card {
+  background: rgba(30, 30, 60, 0.6);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.presave-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+}
+
+.album-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.album-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.presave-card:hover .album-image img {
+  transform: scale(1.05);
+}
+
+.release-countdown {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.countdown-badge {
+  background: var(--warning);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 2s infinite;
+}
+
+.released-badge {
+  background: var(--success);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.album-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(139, 92, 246, 0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.presave-card:hover .album-overlay {
+  opacity: 1;
+}
+
+.presave-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: var(--primary);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.presave-btn:hover {
+  background: var(--neutral-100);
+  transform: scale(1.05);
+}
+
+.presave-btn:disabled {
+  background: var(--neutral-200);
+  color: var(--neutral-500);
+  cursor: not-allowed;
+}
+
+.presave-btn:disabled:hover {
+  transform: none;
+}
+
+.presave-btn.presaved {
+  background: var(--success);
+  color: white;
+}
+
+.presave-btn.presaved:hover {
+  background: #059669;
+}
+
+.album-info {
+  padding: 24px;
+}
+
+.album-artist {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.album-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.album-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--neutral-300);
+  font-size: 0.95rem;
+}
+
+.detail-row svg {
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.album-genre {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.album-description {
+  color: var(--neutral-400);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.preview-track {
+  color: var(--neutral-300);
+  font-size: 0.9rem;
+  padding: 12px;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid var(--success);
+}
+
+.presaved-summary {
+  text-align: center;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 48px;
+}
+
+.presaved-summary h3 {
+  color: var(--success);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.presaved-summary p {
+  color: var(--neutral-300);
+  font-size: 1.1rem;
+}
+
+.presave-benefits {
+  text-align: center;
+  background: rgba(30, 30, 60, 0.4);
+  border-radius: 20px;
+  padding: 48px 24px;
+}
+
+.presave-benefits h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 32px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 24px;
+}
+
+.benefit-card svg {
+  color: var(--success);
+  margin-bottom: 16px;
+}
+
+.benefit-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.benefit-card p {
+  color: var(--neutral-400);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .presave-page {
+    padding: 20px 0 60px;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .page-subtitle {
+    font-size: 1.1rem;
+    padding: 0 16px;
+  }
+  
+  .presave-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .presave-card {
+    margin: 0 16px;
+  }
+  
+  .album-image {
+    height: 240px;
+  }
+  
+  .album-info {
+    padding: 20px;
+  }
+  
+  .album-title {
+    font-size: 1.25rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .presave-benefits {
+    padding: 32px 16px;
+  }
+  
+  .presave-benefits h2 {
+    font-size: 1.5rem;
+  }
+}
